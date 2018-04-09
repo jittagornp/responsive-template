@@ -10,8 +10,6 @@ Copyright 2018 Pamarin.com
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    </head>
-    <body>
 
         <style>
             .ui--clear{
@@ -158,13 +156,19 @@ Copyright 2018 Pamarin.com
                 width: 50px;
             }
 
+            @media (max-width: 400px) { 
+                .ui-username-lastname{
+                    display: none;
+                }
+            }
+
             /* 
             Extra small devices (portrait phones, less than 576px)
             No media query since this is the default in Bootstrap
             Small devices (landscape phones, 576px and up)
             */
             @media (min-width: 576px) { }
-            
+
             @media (max-width: 576px) { 
                 .ui-appname{
                     display: none;
@@ -206,6 +210,9 @@ Copyright 2018 Pamarin.com
             }
         </style>
 
+    </head>
+    <body>
+
         <div class="ui-header">
             <div class="ui-sidebar-toggle">
                 <span class="fa fa-bars"></span>
@@ -227,7 +234,8 @@ Copyright 2018 Pamarin.com
             </div>
 
             <div class="ui-username">
-                Mr. Jittagorn Pitakmetagoon
+                <span class="ui-username-firstname">Mr. Jittagorn</span>
+                <span class="ui-username-lastname">Pitakmetagoon</span>
             </div>
 
             <div class="ui--clear"></div>
