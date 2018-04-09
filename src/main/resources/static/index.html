@@ -1,14 +1,158 @@
-<!DOCTYPE html>
+<!dOCTYPE html>
 <!--
 Copyright 2018 Pamarin.com
 -->
-<html>
+<html lang="en">
     <head>
         <title>Hello Responsive Template</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
-        <div>Hello Responsive Template</div>
+
+        <style>
+            .ui-show--block{
+                display: block !important;
+            }
+
+            .ui-header{
+                background-color: red;
+                height: 56px;
+                z-index: 10;
+                position: fixed;
+                top : 0;
+                left: 0;
+                right: 0;
+            }
+
+            .ui-sidebar-toggle{
+                background-color: black;
+                float: left;
+                width: 56px;
+                height: 56px;
+            }
+
+            .ui-sidebar{
+                width: 240px;
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                background-color: blue;
+                display: none;
+                z-index: 11;
+            }
+
+            .ui-header-menu-toggle{
+                background-color: black;
+                float: right;
+                width: 56px;
+                height: 56px;
+            }
+
+            .ui-sidebar-header{
+                height: 56px;
+                border-bottom: solid 1px black;
+            }
+
+            .ui-container{
+                background-color: yellow;
+                margin-top: 56px;
+            }
+
+            /* 
+            Extra small devices (portrait phones, less than 576px)
+            No media query since this is the default in Bootstrap
+            Small devices (landscape phones, 576px and up)
+            */
+            @media (min-width: 576px) { }
+
+            /* Medium devices (tablets, 768px and up)*/
+            @media (min-width: 768px) {  }
+
+            /*Large devices (desktops, 992px and up)*/
+            @media (min-width: 992px) {  
+
+            }
+
+            /*Extra large devices (large desktops, 1200px and up)*/
+            @media (min-width: 1200px) {  
+                .ui-sidebar{
+                    display: block;
+                    z-index: 9 !important;
+                }
+
+                .ui-container{
+                    margin-left: 240px;
+                }
+            }
+        </style>
+
+        <div class="ui-header">
+            <div class="ui-sidebar-toggle">
+
+            </div>
+            <div class="ui-header-menu-toggle dropdown-toggle"  data-toggle="dropdown">
+
+            </div>
+
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Menu 1</a>
+                <a class="dropdown-item" href="#">Menu 2</a>
+                <a class="dropdown-item" href="#">Menu 3</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Logout</a>
+            </div>
+        </div>
+
+        <div class="ui-sidebar">
+            <div class="ui-sidebar-header">
+                <div class="ui-sidebar-toggle">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="ui-container">
+            xx
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <script>
+            (function ($) {
+              $(function () {
+                var $doc = $(document);
+                var $sidebar = $('.ui-sidebar');
+                var $sidebarToggle = $('.ui-sidebar-toggle');
+
+                $sidebarToggle.on('click', function () {
+                  if ($sidebar.hasClass('ui-show--block')) {
+                    $sidebar.removeClass('ui-show--block');
+                  } else {
+                    $sidebar.addClass('ui-show--block');
+                  }
+                });
+
+                function isClassClicked($el, clazz) {
+                  return $el.hasClass(clazz)
+                          || $el.parents('.' + clazz).length > 0;
+                }
+
+                $doc.on('click', function (event) {
+                  var $el = $(event.target);
+                  if (!(isClassClicked($el, 'ui-sidebar-toggle') || isClassClicked($el, 'ui-sidebar'))) {
+                    if ($sidebar.hasClass('ui-show--block')) {
+                      $sidebar.removeClass('ui-show--block');
+                    }
+                  }
+                });
+              });
+            })(jQuery);
+        </script>
     </body>
 </html>
