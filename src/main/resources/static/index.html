@@ -82,8 +82,11 @@ Copyright 2018 Pamarin.com
             }
 
             .ui-container{
-                background-color: yellow;
                 margin-top: 56px;
+            }
+
+            .ui-container .container{
+
             }
 
             /* 
@@ -144,7 +147,68 @@ Copyright 2018 Pamarin.com
         </div>
 
         <div class="ui-container">
-            xx
+            <div class="container">
+                <h1>
+                    Responsive web design
+                </h1>
+                <p>
+                    <strong>
+                        Responsive web design (RWD)
+                    </strong> 
+
+                    is an approach to web design which makes web pages render well on a variety of devices and window or screen sizes. Recent work also considers the viewer proximity as part of the viewing context as an extension for RWD[1]. Content, design and performance are necessary across all devices to ensure usability and satisfaction.[2][3][4][5]
+
+                    A site designed with RWD[2][6] adapts the layout to the viewing environment by using fluid, proportion-based grids,[7][8] flexible images,[9][10][11] and CSS3 media queries,[4][12][13] an extension of the @media rule, in the following ways:[14]
+
+                    The fluid grid concept calls for page element sizing to be in relative units like percentages, rather than absolute units like pixels or points.[8]
+                    Flexible images are also sized in relative units, so as to prevent them from displaying outside their containing element.[9]
+                    Media queries allow the page to use different CSS style rules based on characteristics of the device the site is being displayed on, most commonly the width of the browser.
+                    Responsive web design has become more important as the amount of mobile traffic now accounts for more than half of total internet traffic.[15] Therefore, Google announced Mobilegeddon in 2015, and started to boost the ratings of sites that are mobile friendly if the search was made from a mobile device.[16] Responsive web design is an example of user interface plasticity.[17]
+                </p>
+
+                <h1>
+                    Related concepts
+                </h1>
+
+                <h3>
+                    Mobile first, unobtrusive JavaScript, and progressive enhancement
+                </h3>
+
+                <p>
+                    "Mobile first", unobtrusive JavaScript, and progressive enhancement are related concepts that predate RWD.[18] Browsers of basic mobile phones do not understand JavaScript or media queries, so a recommended practice is to create a basic web site and enhance it for smart phones and PCs, rather than rely on graceful degradation to make a complex, image-heavy site work on mobile phones.[19][20][21][22]
+
+                    Progressive enhancement based on browser, device, or feature detection
+                    Due to the high volume of usage of internet on mobile devices they can no longer be ignored. In 2014, for the first time more users accessed the internet from their mobile devices than desktop[23]. Where a web site must support basic mobile devices that lack JavaScript, browser ("user agent") detection (also called "browser sniffing") and mobile device detection[20][24] are two ways of deducing if certain HTML and CSS features are supported (as a basis for progressive enhancement)—however, these methods are not completely reliable unless used in conjunction with a device capabilities database.
+
+                    For more capable mobile phones and PCs, JavaScript frameworks like Modernizr, jQuery, and jQuery Mobile that can directly test browser support for HTML/CSS features (or identify the device or user agent) are popular. Polyfills can be used to add support for features—e.g. to support media queries (required for RWD), and enhance HTML5 support, on Internet Explorer. Feature detection also might not be completely reliable; some may report that a feature is available, when it is either missing or so poorly implemented that it is effectively nonfunctional.[25][26]
+                </p>
+
+                <h3>
+                    Challenges, and other approaches
+                </h3>
+
+                <p>
+                    Luke Wroblewski has summarized some of the RWD and mobile design challenges, and created a catalog of multi-device layout patterns.[27][28][29] He suggests that, compared with a simple RWD approach, device experience or RESS (responsive web design with server-side components) approaches can provide a user experience that is better optimized for mobile devices.[30][31][32] Server-side "dynamic CSS" implementation of stylesheet languages like Sass or Incentivated's MML can be part of such an approach by accessing a server based API which handles the device (typically mobile handset) differences in conjunction with a device capabilities database in order to improve usability.[33] RESS is more expensive to develop, requiring more than just client-side logic, and so tends to be reserved for organizations with larger budgets. Google recommends responsive design for smartphone websites over other approaches.[34]
+
+                    Although many publishers are starting to implement responsive designs, one ongoing challenge for RWD is that some banner advertisements and videos are not fluid.[35] However, search advertising and (banner) display advertising support specific device platform targeting and different advertisement size formats for desktop, smartphone, and basic mobile devices. Different landing page URLs can be used for different platforms,[36] or Ajax can be used to display different advertisement variants on a page.[24][28][37] CSS tables permit hybrid fixed+fluid layouts.[38]
+
+                    There are now many ways of validating and testing RWD designs,[39] ranging from mobile site validators and mobile emulators [40] to simultaneous testing tools like Adobe Edge Inspect.[41] The Chrome, Firefox and Safari browsers and the Chrome console offer responsive design viewport resizing tools, as do third parties.[42][43]
+
+                    Use cases of RWD will now expand further with increased mobile usage; according to Statista, organic search engine visits in the US coming from mobile devices has hit 51% and are increasing.[44]
+                </p>
+
+                <h3>
+                    History
+                </h3>
+
+                <p>
+                    The first site to feature a layout that adapts to browser viewport width was Audi.com launched in late 2001,[45] created by a team at razorfish consisting of Jürgen Spangl and Jim Kalbach (information architecture), Ken Olling (design), and Jan Hoffmann (interface development). Limited browser capabilities meant that for Internet Explorer, the layout could adapt dynamically in the browser whereas for Netscape, the page had to be reloaded from the server when resized.
+
+                    Cameron Adams created a demonstration in 2004 that is still online.[46] By 2008, a number of related terms such as "flexible", "liquid",[47] "fluid", and "elastic" were being used to describe layouts. CSS3 media queries were almost ready for prime time in late 2008/early 2009.[48] Ethan Marcotte coined the term responsive web design[49] (RWD)—and defined it to mean fluid grid/ flexible images/ media queries—in a May 2010 article in A List Apart.[2] He described the theory and practice of responsive web design in his brief 2011 book titled Responsive Web Design. Responsive design was listed as #2 in Top Web Design Trends for 2012 by .net magazine after progressive enhancement at #1.
+
+                    Mashable called 2013 the Year of Responsive Web Design.[50] Many other sources have recommended responsive design as a cost-effective alternative to mobile applications due to its ability to house all of the code in a single website.
+                </p>
+            </div>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
