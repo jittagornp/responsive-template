@@ -20,7 +20,7 @@ Copyright 2018 Pamarin.com
             .ui-header{
                 background-color: red;
                 height: 56px;
-                z-index: 10;
+                z-index: 2;
                 position: fixed;
                 top : 0;
                 left: 0;
@@ -42,7 +42,7 @@ Copyright 2018 Pamarin.com
                 bottom: 0;
                 background-color: blue;
                 display: none;
-                z-index: 11;
+                z-index: 3;
             }
 
             .ui-header-menu-toggle{
@@ -81,7 +81,7 @@ Copyright 2018 Pamarin.com
             @media (min-width: 1200px) {  
                 .ui-sidebar{
                     display: block;
-                    z-index: 9 !important;
+                    z-index: 1 !important;
                 }
 
                 .ui-container{
@@ -126,6 +126,7 @@ Copyright 2018 Pamarin.com
         <script>
             (function ($) {
               $(function () {
+                var $win = $(window);
                 var $doc = $(document);
                 var $sidebar = $('.ui-sidebar');
                 var $sidebarToggle = $('.ui-sidebar-toggle');
@@ -149,6 +150,12 @@ Copyright 2018 Pamarin.com
                     if ($sidebar.hasClass('ui-show--block')) {
                       $sidebar.removeClass('ui-show--block');
                     }
+                  }
+                });
+
+                $win.on('resize', function () {
+                  if ($sidebar.hasClass('ui-show--block')) {
+                    $sidebar.removeClass('ui-show--block');
                   }
                 });
               });
