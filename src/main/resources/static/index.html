@@ -62,6 +62,11 @@ Copyright 2018 Pamarin.com
                 box-shadow: 3px 0 5px rgba(0, 0, 0, 0.06);
             }
 
+            .ui-sidebar .list-group-item{
+                background: none;
+                border: 1px solid rgba(0, 0, 0, 0.03);
+            }
+
             .ui-header-menu-toggle{
                 float: right;
                 width: 56px;
@@ -75,11 +80,11 @@ Copyright 2018 Pamarin.com
                 font-size: 24px;
                 color: #989898;
             }
-            
+
             .ui-header-menu-toggle[aria-expanded="true"]:after{
                 color: #212529;
             }
-            
+
             .ui-header .dropdown-menu{
                 z-index: 4;
             }
@@ -152,6 +157,13 @@ Copyright 2018 Pamarin.com
                     <span class="fa fa-bars"></span>
                 </div>
             </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Cras justo odio</li>
+                <li class="list-group-item">Dapibus ac facilisis in</li>
+                <li class="list-group-item">Morbi leo risus</li>
+                <li class="list-group-item">Porta ac consectetur ac</li>
+                <li class="list-group-item">Vestibulum at eros</li>
+            </ul>
         </div>
 
         <div class="ui-container">
@@ -245,25 +257,25 @@ Copyright 2018 Pamarin.com
                           || $el.parents('.' + clazz).length > 0;
                 }
 
+                function removeShowBlock() {
+                  if ($sidebar.hasClass('ui-show--block')) {
+                    $sidebar.removeClass('ui-show--block');
+                  }
+                }
+
                 $doc.on('click', function (event) {
                   var $el = $(event.target);
                   if (!(isClassClicked($el, 'ui-sidebar-toggle') || isClassClicked($el, 'ui-sidebar'))) {
-                    if ($sidebar.hasClass('ui-show--block')) {
-                      $sidebar.removeClass('ui-show--block');
-                    }
+                    removeShowBlock();
                   }
                 });
 
-                $win.on('resize', function () {
-                  if ($sidebar.hasClass('ui-show--block')) {
-                    $sidebar.removeClass('ui-show--block');
-                  }
+                $win.on('resize, scroll', function () {
+                  removeShowBlock();
                 });
 
                 $headerMenuToggle.on('click', function () {
-                  if ($sidebar.hasClass('ui-show--block')) {
-                    $sidebar.removeClass('ui-show--block');
-                  }
+                  removeShowBlock();
                 });
               });
             })(jQuery);
