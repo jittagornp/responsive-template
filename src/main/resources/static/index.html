@@ -130,6 +130,7 @@ Copyright 2018 Pamarin.com
                 var $doc = $(document);
                 var $sidebar = $('.ui-sidebar');
                 var $sidebarToggle = $('.ui-sidebar-toggle');
+                var $headerMenuToggle = $('.ui-header-menu-toggle');
 
                 $sidebarToggle.on('click', function () {
                   if ($sidebar.hasClass('ui-show--block')) {
@@ -154,6 +155,12 @@ Copyright 2018 Pamarin.com
                 });
 
                 $win.on('resize', function () {
+                  if ($sidebar.hasClass('ui-show--block')) {
+                    $sidebar.removeClass('ui-show--block');
+                  }
+                });
+
+                $headerMenuToggle.on('click', function () {
                   if ($sidebar.hasClass('ui-show--block')) {
                     $sidebar.removeClass('ui-show--block');
                   }
