@@ -93,7 +93,7 @@ Copyright 2018 Pamarin.com
                 height: 56px;
                 border-bottom: solid 1px #e8e7e7;
             }
-            
+
             .ui-sidebar .list-group .list-group-item:first-child{
                 border-top: none;
             }
@@ -104,6 +104,31 @@ Copyright 2018 Pamarin.com
 
             .ui-container .container{
 
+            }
+
+            .ui-loading{
+                position: fixed;
+                left: 0;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 1000;
+                background-color: #fff;
+            }
+
+            .ui-loading-block{
+                width: 150px;
+                text-align: center;
+                height: 74px;
+                position: absolute;
+                left: 50%;
+                margin-left: -75px;
+                top: 20%;
+                color: #999;
+            }
+
+            .ui-loading img{
+                width: 50px;
             }
 
             /* 
@@ -123,11 +148,11 @@ Copyright 2018 Pamarin.com
 
             /*Extra large devices (large desktops, 1200px and up)*/
             @media (min-width: 1200px) {  
-                
+
                 .ui-header .ui-sidebar-toggle{
                     display: none;
                 }
-                
+
                 .ui-sidebar{
                     display: block;
                     z-index: 1;
@@ -140,7 +165,7 @@ Copyright 2018 Pamarin.com
                 .ui-container{
                     margin-left: 240px;
                 }
-                
+
                 .ui-container .container{
                     padding-top: 2rem;
                     padding-bottom: 2rem; 
@@ -245,6 +270,13 @@ Copyright 2018 Pamarin.com
             </div>
         </div>
 
+        <div class="ui-loading">
+            <div class="ui-loading-block">
+                <div>Loading...</div>
+                <img src="loading.gif"/>
+            </div>
+        </div>
+
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -291,6 +323,11 @@ Copyright 2018 Pamarin.com
                 $headerMenuToggle.on('click', function () {
                   removeShowBlock();
                 });
+                
+                var t = setTimeout(function(){
+                    clearTimeout(t);
+                    $('.ui-loading').hide();
+                }, 1000);
               });
             })(jQuery);
         </script>
