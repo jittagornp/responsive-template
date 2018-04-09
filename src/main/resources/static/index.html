@@ -14,6 +14,10 @@ Copyright 2018 Pamarin.com
     <body>
 
         <style>
+            .ui--clear{
+                clear: both;
+            }
+
             .ui-show--block{
                 display: block !important;
             }
@@ -27,6 +31,19 @@ Copyright 2018 Pamarin.com
                 top : 0;
                 left: 0;
                 right: 0;
+            }
+
+            .ui-appname{
+                line-height: 56px;
+                font-size: 120%;
+                font-weight: bold;
+                margin-left: 1rem;
+                float: left;
+            }
+
+            .ui-username{
+                float: right;
+                line-height: 56px;
             }
 
             .ui-sidebar-toggle{
@@ -80,7 +97,7 @@ Copyright 2018 Pamarin.com
                 font-size: 24px;
                 color: #989898;
             }
-            
+
             .ui-header-menu-dropdown{
                 position: fixed;
                 top: 60px;
@@ -147,6 +164,12 @@ Copyright 2018 Pamarin.com
             Small devices (landscape phones, 576px and up)
             */
             @media (min-width: 576px) { }
+            
+            @media (max-width: 576px) { 
+                .ui-appname{
+                    display: none;
+                }
+            }
 
             /* Medium devices (tablets, 768px and up)*/
             @media (min-width: 768px) {  }
@@ -187,6 +210,11 @@ Copyright 2018 Pamarin.com
             <div class="ui-sidebar-toggle">
                 <span class="fa fa-bars"></span>
             </div>
+
+            <div class="ui-appname">
+                Application Name
+            </div>
+
             <div class="ui-header-menu-toggle">
                 <span class="fa fa-caret-down"></span>
             </div>
@@ -197,6 +225,12 @@ Copyright 2018 Pamarin.com
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Logout</a>
             </div>
+
+            <div class="ui-username">
+                Mr. Jittagorn Pitakmetagoon
+            </div>
+
+            <div class="ui--clear"></div>
         </div>
 
         <div class="ui-sidebar">
