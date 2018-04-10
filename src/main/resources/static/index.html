@@ -357,14 +357,14 @@ Copyright 2018 Pamarin.com
                   }
                 }
 
-                function isClassClicked($el, clazz) {
+                function isWithinClass($el, clazz) {
                   return $el.hasClass(clazz)
                           || $el.parents('.' + clazz).length > 0;
                 }
 
-                function isClassessClicked($el, clazzezz) {
+                function isWithinClassess($el, clazzezz) {
                   for (var i = 0; i < clazzezz.length; i++) {
-                    if (isClassClicked($el, clazzezz[i])) {
+                    if (isWithinClass($el, clazzezz[i])) {
                       return true;
                     }
                   }
@@ -391,11 +391,11 @@ Copyright 2018 Pamarin.com
 
                 $doc.on('click', function (event) {
                   var $el = $(event.target);
-                  if (!isClassessClicked($el, ['ui-sidebar-toggle', 'ui-sidebar'])) {
+                  if (!isWithinClassess($el, ['ui-sidebar-toggle', 'ui-sidebar'])) {
                     sidebarRemoveShow();
                   }
 
-                  if (!isClassessClicked($el, ['ui-header-menu-toggle', 'ui-header-menu-dropdown'])) {
+                  if (!isWithinClassess($el, ['ui-header-menu-toggle', 'ui-header-menu-dropdown'])) {
                     dropdownRemoveShow();
                   }
                 });
