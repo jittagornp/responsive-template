@@ -2,8 +2,11 @@
 
     <nav aria-label="breadcrumb" class="ui-breadcrumb">
         <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="?page=user-management">จัดการบัญชีผู้ใช้</a>
+            </li>
             <li class="breadcrumb-item active" aria-current="page">
-                บัญชีผู้ใช้
+                เพิ่มผู้ใช้งาน
             </li>
         </ol>
         <button class="btn btn-light ui-back-button">
@@ -18,8 +21,8 @@
     </div>
 
     <div class="ui-container-header">
-        <span class="fa fa-user"></span>
-        บัญชีผู้ใช้
+        <span class="fa fa-user-plus"></span>
+        เพิ่มผู้ใช้งาน
     </div>
 
     <form class="ui-form">
@@ -39,18 +42,15 @@
                 </div>
                 <div class="form-group">
                     <label for="password">รหัสผ่าน</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password" value="*****" disabled>
-                    <a href="?page=change-password" style="margin-top: 0.5rem; display: block;" class="text-right">เปลี่ยนรหัสผ่าน</a>
+                    <input type="password" class="form-control" id="password" placeholder="Password" value="*****">
                 </div>
                 <div class="form-group">
                     <label for="email">อีเมล</label>
-                    <input type="email" class="form-control" id="email" placeholder="Email" disabled>
-                    <a href="?page=change-email" style="margin-top: 0.5rem; display: block;" class="text-right">เปลี่ยนอีเมล</a>
+                    <input type="email" class="form-control" id="email" placeholder="Email">
                 </div>
                 <div class="form-group">
                     <label for="mobile">เบอร์โทรศัพท์</label>
-                    <input type="text" class="form-control" id="mobile" placeholder="Mobile" disabled>
-                    <a href="?page=change-mobile" style="margin-top: 0.5rem; display: block;" class="text-right">เปลี่ยนเบอร์โทรศัพท์</a>
+                    <input type="text" class="form-control" id="mobile" placeholder="Mobile">
                 </div>
             </div>
             <div class="col-sm">

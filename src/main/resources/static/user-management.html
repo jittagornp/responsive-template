@@ -1,0 +1,51 @@
+<span th:fragment="page">
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+                จัดการบัญชีผู้ใช้
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-container-header">
+        <span class="fa fa-users"></span>
+        จัดการบัญชีผู้ใช้
+    </div>
+
+    <h4 class="ui-container-topic">ผู้ใช้งาน</h4>
+    
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <a href="?page=add-user">เพิ่มผู้ใช้งาน</a>
+        </li>
+        <li class="list-group-item">
+            <a href="?page=search-user">ค้นหาผู้ใช้งาน</a>
+        </li>
+    </ul>
+    
+    <h4 class="ui-container-topic">กลุ่มผู้ใช้งาน</h4>
+    
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <a href="#">เพิ่มกลุ่มผู้ใช้งาน</a>
+        </li>
+        <li class="list-group-item">
+            <a href="#">ค้นหากลุ่มผู้ใช้งาน</a>
+        </li>
+    </ul>
+    
+    <h4 class="ui-container-topic">สิทธิ์</h4>
+    
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <a href="#">เพิ่มสิทธิ์</a>
+        </li>
+        <li class="list-group-item">
+            <a href="#">ค้นหาสิทธิ์</a>
+        </li>
+    </ul>
+</span>
