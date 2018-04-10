@@ -217,6 +217,14 @@ Copyright 2018 Pamarin.com
             .ui-save-button{
                 min-width: 100px;
             }
+            
+            .ui-save-alert{
+                display: none;
+            }
+            
+            .ui-save-alert .fa{
+                margin-right: 0.5rem;
+            }
 
             @media (max-width: 400px) { 
                 .ui-username-lastname{
@@ -438,6 +446,8 @@ Copyright 2018 Pamarin.com
 
                 $('form').on('submit', function (event) {
                   event.preventDefault();
+                  $('.ui-save-alert').show();
+                  $win.scrollTop(0);
                 });
               });
             })(jQuery);
