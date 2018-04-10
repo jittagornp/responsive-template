@@ -5,6 +5,7 @@ package com.pamarin.responsive.template;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -14,8 +15,10 @@ import org.springframework.web.servlet.ModelAndView;
 public class IndexCtrl {
 
     @GetMapping({"", "/"})
-    public ModelAndView getIndex() {
-        return new ModelAndView("index");
+    public ModelAndView getIndex(@RequestParam(value = "page", required = false, defaultValue = "index") String page) {
+        ModelAndView mav = new ModelAndView("template");
+        mav.addObject("page", page);
+        return mav;
     }
 
 }

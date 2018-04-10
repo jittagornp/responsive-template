@@ -1,0 +1,62 @@
+<span th:fragment="page">
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">
+                บัญชีผู้ใช้
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-container-header">
+        <span class="fa fa-user"></span>
+        บัญชีผู้ใช้
+    </div>
+
+    <form class="ui-form">
+        <div class="row">
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="firstName">ชื่อ</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <label for="lastName">นามสกุล</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="password">รหัสผ่าน</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password" value="*****" disabled>
+                    <a href="?page=change-password" style="margin-top: 0.5rem; display: block;" class="text-right">เปลี่ยนรหัสผ่าน</a>
+                </div>
+                <div class="form-group">
+                    <label for="email">อีเมล</label>
+                    <input type="email" class="form-control" id="email" placeholder="Email" disabled>
+                    <a href="?page=change-email" style="margin-top: 0.5rem; display: block;" class="text-right">เปลี่ยนอีเมล</a>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">เบอร์โทรศัพท์</label>
+                    <input type="text" class="form-control" id="mobile" placeholder="Mobile" disabled>
+                    <a href="?page=change-mobile" style="margin-top: 0.5rem; display: block;" class="text-right">เปลี่ยนเบอร์โทรศัพท์</a>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="form-group">
+                    <label for="position">ตำแหน่ง</label>
+                    <input type="text" class="form-control" id="position" placeholder="Position">
+                </div>
+                <div class="form-group">
+                    <label for="under">สังกัด</label>
+                    <input type="text" class="form-control" id="under" placeholder="Under">
+                </div>
+            </div>
+        </div>
+        <div class="ui-form-footer">
+            <button type="submit" class="btn btn-light">ยกเลิก</button>
+            <button type="submit" class="btn btn-primary ui-save-button">บันทึก</button>
+        </div>
+    </form>
+</span>
