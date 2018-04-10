@@ -48,6 +48,7 @@ Copyright 2018 Pamarin.com
             .ui-username{
                 float: right;
                 line-height: 56px;
+                cursor: pointer; 
             }
 
             .ui-sidebar-toggle{
@@ -128,6 +129,10 @@ Copyright 2018 Pamarin.com
             .ui-sidebar .list-group .list-group-item{
                 border-right: none;
             }
+            
+            .ui-sidebar .list-group .list-group-item:hover{
+                background-color: #f7f7f7;
+            }
 
             .ui-sidebar .list-group .list-group-item:first-child{
                 border-top: none;
@@ -179,7 +184,7 @@ Copyright 2018 Pamarin.com
             .ui-container-header .fa{
                 margin-right: 0.5rem;
             }
-            
+
             .ui-container-topic{
                 margin: 2rem 0 1rem 0;
             }
@@ -221,11 +226,11 @@ Copyright 2018 Pamarin.com
             .ui-save-button{
                 min-width: 100px;
             }
-            
+
             .ui-save-alert{
                 display: none;
             }
-            
+
             .ui-save-alert .fa{
                 margin-right: 0.5rem;
             }
@@ -251,7 +256,7 @@ Copyright 2018 Pamarin.com
                 .ui-container-header{
                     font-size: 1.5rem;
                 }
-                
+
                 .ui-breadcrumb .breadcrumb{
                     font-size: 80%;
                 }
@@ -304,8 +309,6 @@ Copyright 2018 Pamarin.com
             </div>
             <div class="ui-header-menu-dropdown">
                 <a class="dropdown-item" href="?page=account">ตั้งค่าบัญชีผู้ใช้</a>
-                <a class="dropdown-item" href="#">Menu 2</a>
-                <a class="dropdown-item" href="#">Menu 3</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">Logout</a>
             </div>
@@ -335,7 +338,7 @@ Copyright 2018 Pamarin.com
                 </a>
                 <a class="list-group-item list-group-item-action" href="#">
                     <span class="fa fa-database"></span>
-                     จัดการข้อมูลพื้นฐาน
+                    จัดการข้อมูลพื้นฐาน
                 </a>
                 <a class="list-group-item list-group-item-action" href="#">
                     <span class="fa fa-circle"></span>
@@ -370,12 +373,10 @@ Copyright 2018 Pamarin.com
               $(function () {
                 var $win = $(window);
                 var $doc = $(document);
-                var $body = $('body');
                 var $sidebar = $('.ui-sidebar');
                 var $sidebarToggle = $('.ui-sidebar-toggle');
-                var $headerMenuToggle = $('.ui-header-menu-toggle');
+                var $headerMenuToggle = $('.ui-header-menu-toggle, .ui-username');
                 var $headerMenuDropdown = $('.ui-header-menu-dropdown');
-                var $loading = $('.ui-loading');
 
                 function toggleClass($el, clazz) {
                   if ($el.hasClass(clazz)) {
@@ -423,7 +424,7 @@ Copyright 2018 Pamarin.com
                     sidebarRemoveShow();
                   }
 
-                  if (!isWithinClassess($el, ['ui-header-menu-toggle', 'ui-header-menu-dropdown'])) {
+                  if (!isWithinClassess($el, ['ui-header-menu-toggle', 'ui-header-menu-dropdown', 'ui-username'])) {
                     dropdownRemoveShow();
                   }
                 });
@@ -441,12 +442,21 @@ Copyright 2018 Pamarin.com
                 $doc.on('click', '.ui-back-button', function () {
                   window.history.back();
                 });
+              });
+            })(jQuery);
+        </script>
+        <script>
+            (function ($) {
+              $(function () {
+                var $win = $(window);
+                var $body = $('body');
+                var $loading = $('.ui-loading');
 
                 $body.show();
                 var t = setTimeout(function () {
                   clearTimeout(t);
                   $loading.hide();
-                }, 1000);
+                }, 500);
 
                 $('form').on('submit', function (event) {
                   event.preventDefault();
