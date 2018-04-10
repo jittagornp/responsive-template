@@ -16,8 +16,14 @@ Copyright 2018 Pamarin.com
                 clear: both;
             }
 
+            div.ui-show,
             .ui-show--block{
                 display: block !important;
+            }
+
+            span.ui-show,
+            .ui-show--inline{
+                display: inline !important;
             }
 
             .ui-header{
@@ -211,7 +217,7 @@ Copyright 2018 Pamarin.com
         </style>
 
     </head>
-    <body>
+    <body style="display: none;">
 
         <div class="ui-header">
             <div class="ui-sidebar-toggle">
@@ -337,61 +343,74 @@ Copyright 2018 Pamarin.com
               $(function () {
                 var $win = $(window);
                 var $doc = $(document);
+                var $body = $('body');
                 var $sidebar = $('.ui-sidebar');
                 var $sidebarToggle = $('.ui-sidebar-toggle');
                 var $headerMenuToggle = $('.ui-header-menu-toggle');
                 var $headerMenuDropdown = $('.ui-header-menu-dropdown');
 
-                $sidebarToggle.on('click', function () {
-                  if ($sidebar.hasClass('ui-show--block')) {
-                    $sidebar.removeClass('ui-show--block');
+                function toggleClass($el, clazz) {
+                  if ($el.hasClass(clazz)) {
+                    $el.removeClass(clazz);
                   } else {
-                    $sidebar.addClass('ui-show--block');
+                    $el.addClass(clazz);
                   }
-                });
+                }
 
                 function isClassClicked($el, clazz) {
                   return $el.hasClass(clazz)
                           || $el.parents('.' + clazz).length > 0;
                 }
 
-                function sidebarRemoveShowBlock() {
-                  if ($sidebar.hasClass('ui-show--block')) {
-                    $sidebar.removeClass('ui-show--block');
+                function isClassessClicked($el, clazzezz) {
+                  for (var i = 0; i < clazzezz.length; i++) {
+                    if (isClassClicked($el, clazzezz[i])) {
+                      return true;
+                    }
+                  }
+                  return false;
+                }
+
+                function removeClassIfExist($el, clazz) {
+                  if ($el.hasClass(clazz)) {
+                    $el.removeClass(clazz);
                   }
                 }
 
-                function dropdownRemoveShowBlock() {
-                  if ($headerMenuDropdown.hasClass('ui-show--block')) {
-                    $headerMenuDropdown.removeClass('ui-show--block');
-                  }
+                function sidebarRemoveShow() {
+                  removeClassIfExist($sidebar, 'ui-show');
                 }
+
+                function dropdownRemoveShow() {
+                  removeClassIfExist($headerMenuDropdown, 'ui-show');
+                }
+
+                $sidebarToggle.on('click', function () {
+                  toggleClass($sidebar, 'ui-show');
+                });
 
                 $doc.on('click', function (event) {
                   var $el = $(event.target);
-                  if (!(isClassClicked($el, 'ui-sidebar-toggle') || isClassClicked($el, 'ui-sidebar'))) {
-                    sidebarRemoveShowBlock();
+                  if (!isClassessClicked($el, ['ui-sidebar-toggle', 'ui-sidebar'])) {
+                    sidebarRemoveShow();
                   }
 
-                  if (!(isClassClicked($el, 'ui-header-menu-toggle') || isClassClicked($el, 'ui-header-menu-dropdown'))) {
-                    dropdownRemoveShowBlock();
+                  if (!isClassessClicked($el, ['ui-header-menu-toggle', 'ui-header-menu-dropdown'])) {
+                    dropdownRemoveShow();
                   }
                 });
 
                 $win.on('resize, scroll', function () {
-                  sidebarRemoveShowBlock();
-                  dropdownRemoveShowBlock();
+                  sidebarRemoveShow();
+                  dropdownRemoveShow();
                 });
 
                 $headerMenuToggle.on('click', function () {
-                  if ($headerMenuDropdown.hasClass('ui-show--block')) {
-                    $headerMenuDropdown.removeClass('ui-show--block');
-                  } else {
-                    $headerMenuDropdown.addClass('ui-show--block');
-                  }
-                  sidebarRemoveShowBlock();
+                  toggleClass($headerMenuDropdown, 'ui-show');
+                  sidebarRemoveShow();
                 });
 
+                $body.show();
                 var t = setTimeout(function () {
                   clearTimeout(t);
                   $('.ui-loading').hide();
