@@ -17,7 +17,7 @@ public class IndexCtrl {
     @GetMapping({"", "/"})
     public ModelAndView getIndex(@RequestParam(value = "page", required = false, defaultValue = "index") String page) {
         ModelAndView mav = new ModelAndView("template");
-        mav.addObject("page", page);
+        mav.addObject("container", page);
         return mav;
     }
 

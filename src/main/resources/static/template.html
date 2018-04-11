@@ -354,39 +354,11 @@ Copyright 2018 Pamarin.com
             <div class="ui--clear"></div>
         </div>
 
-        <div class="ui-sidebar">
-            <div class="ui-sidebar-header">
-                <div class="ui-sidebar-toggle">
-                    <span class="fa fa-bars"></span>
-                </div>
-            </div>
-            <div class="list-group">
-                <a class="list-group-item list-group-item-action" href="?page=index">
-                    <span class="fa fa-home"></span>
-                    หน้าแรก
-                </a>
-                <a class="list-group-item list-group-item-action" href="?page=user-management">
-                    <span class="fa fa-users"></span>
-                    จัดการบัญชีผู้ใช้
-                </a>
-                <a class="list-group-item list-group-item-action" href="#">
-                    <span class="fa fa-database"></span>
-                    จัดการข้อมูลพื้นฐาน
-                </a>
-                <a class="list-group-item list-group-item-action" href="#">
-                    <span class="fa fa-circle"></span>
-                    Porta ac consectetur ac
-                </a>
-                <a class="list-group-item list-group-item-action" href="#">
-                    <span class="fa fa-circle"></span>
-                    Vestibulum at eros
-                </a>
-            </div>
-        </div>
+        <div class="ui-sidebar" th:include="sidebar"></div>
 
         <div class="ui-container">
             <div class="container">
-                <div th:replace="${page == null ? 'blank' : page} :: page"></div>
+                <div th:replace="${container == null ? 'blank' : container} :: container"></div>
             </div>
         </div>
 
@@ -397,7 +369,7 @@ Copyright 2018 Pamarin.com
             </div>
         </div>
 
-        <div class="modal fade ui-loading-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade ui-loading-modal" tabindex="-1" role="dialog" aria-labelledby="loadingModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-sm" role="document">
                 <div class="modal-content">
                     <div>

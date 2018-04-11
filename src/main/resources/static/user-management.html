@@ -1,4 +1,4 @@
-<span th:fragment="page">
+<span th:fragment="container">
     <nav aria-label="breadcrumb" class="ui-breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item active" aria-current="page">
@@ -17,35 +17,35 @@
     </div>
 
     <h4 class="ui-container-topic">ผู้ใช้งาน</h4>
-    
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-            <a href="?page=add-user">เพิ่มผู้ใช้งาน</a>
-        </li>
-        <li class="list-group-item">
-            <a href="?page=search-user">ค้นหาผู้ใช้งาน</a>
-        </li>
-    </ul>
-    
+
+    <div class="list-group list-group-flush">
+        <a class="list-group-item" href="?page=add-user">
+            เพิ่มผู้ใช้งาน
+        </a>
+        <a class="list-group-item" href="?page=search-user">
+            ค้นหาผู้ใช้งาน
+        </a>
+    </div>
+
     <h4 class="ui-container-topic">กลุ่มผู้ใช้งาน</h4>
-    
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-            <a href="?page=add-workgroup">เพิ่มกลุ่มผู้ใช้งาน</a>
-        </li>
-        <li class="list-group-item">
-            <a href="?page=search-workgroup">ค้นหากลุ่มผู้ใช้งาน</a>
-        </li>
-    </ul>
-    
+
+    <div class="list-group list-group-flush">
+        <a class="list-group-item" href="?page=add-workgroup">
+            เพิ่มกลุ่มผู้ใช้งาน
+        </a>
+        <a class="list-group-item" href="?page=search-workgroup">
+            ค้นหากลุ่มผู้ใช้งาน
+        </a>
+    </div>
+
     <h4 class="ui-container-topic">สิทธิ์การใช้งาน</h4>
-    
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-            <a href="?page=add-authority">เพิ่มสิทธิ์การใช้งาน</a>
-        </li>
-        <li class="list-group-item">
-            <a href="?page=search-authority">ค้นหาสิทธิ์การใช้งาน</a>
-        </li>
-    </ul>
+
+    <div class="list-group list-group-flush">
+        <a class="list-group-item" href="?page=add-authority">
+            เพิ่มสิทธิ์การใช้งาน
+        </a>
+        <a class="list-group-item" href="?page=search-authority">
+            ค้นหาสิทธิ์การใช้งาน
+        </a>
+    </div>
 </span>
