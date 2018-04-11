@@ -16,19 +16,6 @@ Copyright 2018 Pamarin.com
                 clear: both;
             }
 
-            .ui-add-button{
-                border-radius: 50% !important;
-                position: fixed;
-                bottom: 30px;
-                right: 30px;
-                width: 60px;
-                height: 60px;
-                text-align: center;
-                line-height: 45px;
-                box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
-                z-index: 3;
-            }
-
             div.ui-show,
             .ui-show--block{
                 display: block !important;
@@ -128,6 +115,7 @@ Copyright 2018 Pamarin.com
                 border-radius: 3px;
                 overflow: hidden;
                 display: none;
+                padding: 0.5rem 0;
             }
 
             .ui-header-menu-dropdown .dropdown-item{
@@ -199,6 +187,10 @@ Copyright 2018 Pamarin.com
 
             .ui-container-header .fa{
                 margin-right: 0.5rem;
+            }
+            
+            .ui-add-button{
+                float: right;
             }
 
             .ui-container-topic{
@@ -333,6 +325,29 @@ Copyright 2018 Pamarin.com
 
                 .ui-container{
                     margin-left: 240px;
+                }
+            }
+
+            @media (max-width : 1200px){
+                .ui-add-button{
+                    border-radius: 50% !important;
+                    position: fixed;
+                    bottom: 30px;
+                    right: 30px;
+                    width: 60px;
+                    height: 60px;
+                    text-align: center;
+                    line-height: 45px;
+                    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.4);
+                    z-index: 3;
+                }
+                
+                .ui-add-button .text-center{
+                    display: none;
+                }
+                
+                .ui-add-button .fa{
+                    margin-right: 0;
                 }
             }
         </style>
