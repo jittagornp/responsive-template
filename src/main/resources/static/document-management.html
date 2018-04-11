@@ -1,8 +1,12 @@
 <span th:fragment="container">
 
     <style>
+        .ui-dcm-left > .breadcrumb{
+            background-color: #f7f7f7;
+        }
+        
         .ui-dcm-info{
-            border: solid 1px #d4d4d4;
+            border: solid 1px #e0e0e0;
             min-height: 300px;
             padding: 1rem;
             background-color: #fafafa;
@@ -31,6 +35,12 @@
                 margin-top: 2rem; 
             }
         }
+        
+        @media (max-width: 576px) { 
+                .ui-dcm-left > .breadcrumb{
+                    font-size: 80%;
+                }
+            }
     </style>
 
     <nav aria-label="breadcrumb" class="ui-breadcrumb">
@@ -52,6 +62,19 @@
 
     <div class="row">
         <div class="col-sm-8 ui-dcm-left">
+
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                    folder 1
+                </li>
+                <li class="breadcrumb-item">
+                    folder 4
+                </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    folder 3
+                </li>
+            </ol>
+
             <h4 class="ui-container-topic">โฟล์เดอร์</h4>
             <div class="list-group list-group-flush">
                 <a class="list-group-item" href="#">
