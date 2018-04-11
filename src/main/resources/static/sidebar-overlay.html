@@ -1,5 +1,5 @@
 <style>
-    .ui-sidebar-dir{
+    .ui-sidebar-overlay{
         position: fixed;
         top : 56px;
         left: 0;
@@ -10,13 +10,13 @@
         border-right: 1px solid #ebebeb;
     }
 
-    .ui-sidebar-dir.ui-collapse{
+    .ui-sidebar-overlay.ui-collapse{
         top: 100%;
         margin-top: -40px; 
         border-radius: 3px 0 0 3px;
     }
 
-    .ui-sidebar-dir-header{
+    .ui-sidebar-overlay-header{
         width: 100%;
         height: 40px;
         border-bottom: 1px solid #e0e0e0;
@@ -25,18 +25,18 @@
         background-color: #fbfbfb;
     }
     
-    .ui-sidebar-dir.ui-collapse .ui-sidebar-dir-header{
+    .ui-sidebar-overlay.ui-collapse .ui-sidebar-overlay-header{
         border-top: 1px solid #e0e0e0;
         border-bottom: none;
     }
 
-    .ui-sidebar-dir-toggle{
+    .ui-sidebar-overlay-toggle{
         border: solid 1px #cccccc;
         padding: 0px 10px;
         color: #7b7b7b;
     }
 
-    .ui-sidebar-dir-body{
+    .ui-sidebar-overlay-body{
         position: absolute;
         top : 40px;
         left: 0;
@@ -45,18 +45,18 @@
     }
     
     @media (min-width : 1200px){
-        .ui-sidebar-dir{
+        .ui-sidebar-overlay{
             box-shadow: none !important;
         }
     }
 </style>
 
-<div class="ui-sidebar-dir-header">
-    <button class="btn btn-light ui-sidebar-dir-toggle">
+<div class="ui-sidebar-overlay-header">
+    <button class="btn btn-light ui-sidebar-overlay-toggle">
         <span class="fa fa-angle-down"></span>
         <span class="text-center">ซ่อน</span>
     </button>
 </div>
-<div class="ui-sidebar-dir-body">
-    Directory
+<div class="ui-sidebar-overlay-body">
+    Overlay
 </div>

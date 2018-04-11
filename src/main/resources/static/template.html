@@ -145,7 +145,7 @@ Copyright 2018 Pamarin.com
                 margin-right: 0.5rem;
             }
 
-            .ui-sidebar-dir{
+            .ui-sidebar-overlay{
                 display: none;
             }
 
@@ -396,7 +396,7 @@ Copyright 2018 Pamarin.com
 
         <div class="ui-sidebar">
             <div th:include="sidebar"></div>
-            <div class="ui-sidebar-dir" th:include="sidebar-directory"></div>
+            <div class="ui-sidebar-overlay" th:include="sidebar-overlay"></div>
         </div>
 
         <div class="ui-container">
@@ -553,9 +553,9 @@ Copyright 2018 Pamarin.com
               $(function () {
 
                 var $sidebar = $('.ui-sidebar');
-                var $dir = $('.ui-sidebar-dir');
-                var $dirHeader = $('.ui-sidebar-dir-header');
-                var $toggleButton = $('.ui-sidebar-dir-toggle');
+                var $overlay = $('.ui-sidebar-overlay');
+                var $overalyHeader = $('.ui-sidebar-overlay-header');
+                var $toggleButton = $('.ui-sidebar-overlay-toggle');
 
                 function toggleClass($el, clazz, addCallback, removeCallback) {
                   if ($el.hasClass(clazz)) {
@@ -567,8 +567,8 @@ Copyright 2018 Pamarin.com
                   }
                 }
 
-                $dirHeader.on('click', function () {
-                  toggleClass($dir, 'ui-collapse', function () {
+                $overalyHeader.on('click', function () {
+                  toggleClass($overlay, 'ui-collapse', function () {
                     $toggleButton.find('.text-center').text('แสดง');
                     $toggleButton.find('.fa')
                             .removeClass('fa-angle-down')
