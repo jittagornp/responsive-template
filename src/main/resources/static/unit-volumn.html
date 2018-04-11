@@ -1,0 +1,127 @@
+<span th:fragment="container">
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="?page=master-data-management">จัดการข้อมูลพื้นฐาน</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                หน่วยปริมาณ
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-container-header">
+        หน่วยปริมาณ
+
+        <a class="btn btn-success ui-add-button" href="?page=add-unit-volumn">
+            <span class="fa fa-plus"></span>
+            <span class="text-center">เพิ่มหน่วยปริมาณ</span>
+        </a>
+    </div>
+    
+    <div class="input-group" style="margin-bottom: 1rem;">
+        <input type="text" class="form-control" placeholder="ค้นหาด้วย ชื่อ"/>
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-primary">ค้นหา</button>
+        </span>
+    </div>
+
+
+    <div style="margin-bottom: 1rem;">
+        พบทั้งหมด 4 รายการ
+    </div>
+
+    <div class="table-responsive-sm">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ชื่อหน่วยปริมาณ</th>
+                    <th scope="col" class="text-center" style="width: 30px;">
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>กำ</td>
+                    <td>
+                        <div class="dropleft dropdown">
+                            <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-ellipsis-v"></span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">ลบ</a>
+                                <a class="dropdown-item" href="?page=edit-unit-volumn">แก้ไขข้อมูล</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>ตู้คอนเทรนเนอร์</td>
+                    <td>
+                        <div class="dropleft dropdown">
+                            <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-ellipsis-v"></span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">ลบ</a>
+                                <a class="dropdown-item" href="?page=edit-unit-volumn">แก้ไขข้อมูล</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>หวี</td>
+                    <td>
+                        <div class="dropleft dropdown">
+                            <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-ellipsis-v"></span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">ลบ</a>
+                                <a class="dropdown-item" href="?page=edit-unit-volumn">แก้ไขข้อมูล</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>เครื่อง</td>
+                    <td>
+                        <div class="dropleft dropdown">
+                            <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="fa fa-ellipsis-v"></span>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">ลบ</a>
+                                <a class="dropdown-item" href="?page=edit-unit-volumn">แก้ไขข้อมูล</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+</span>
