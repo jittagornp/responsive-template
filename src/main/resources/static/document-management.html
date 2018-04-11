@@ -1,24 +1,35 @@
 <span th:fragment="container">
 
     <style>
-        .ui-dcm-left{
+        .ui-dcm-info{
+            border: solid 1px #d4d4d4;
             min-height: 300px;
-            background-color: red;
-        }
-
-        .ui-dcm-right{
-            min-height: 300px;
-            background-color: yellow;
+            padding: 1rem;
+            background-color: #fafafa;
+            border-radius: 3px;
         }
 
         .ui-sidebar-overlay{
             display: block;
             box-shadow: 3px 0 15px rgba(0, 0, 0, 0.28);
         }
-        
+
         .ui-sidebar{
             bottom: 40px;
             overflow: hidden;
+        }
+
+        @media (max-width : 1000px){
+            .col-sm-8.ui-dcm-left{
+                max-width: 100%;
+                flex: 0 0 100%
+            }
+
+            .ui-dcm-right{
+                max-width: 100%;
+                flex: 0 0 100%;
+                margin-top: 2rem; 
+            }
         }
     </style>
 
@@ -39,5 +50,80 @@
         จัดการเอกสาร
     </div>
 
+    <div class="row">
+        <div class="col-sm-8 ui-dcm-left">
+            <h4 class="ui-container-topic">โฟล์เดอร์</h4>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item" href="#">
+                    Folder 1
+                </a>
+                <a class="list-group-item" href="#">
+                    Folder 2
+                </a>
+                <a class="list-group-item" href="#">
+                    Folder 3
+                </a>
+                <a class="list-group-item" href="#">
+                    Folder 4
+                </a>
+                <a class="list-group-item" href="#">
+                    Folder 5
+                </a>
+                <a class="list-group-item" href="#">
+                    Folder 6
+                </a>
+                <a class="list-group-item" href="#">
+                    Folder 7
+                </a>
+                <a class="list-group-item" href="#">
+                    Folder 8
+                </a>
+                <a class="list-group-item" href="#">
+                    Folder 9
+                </a>
+                <a class="list-group-item" href="#">
+                    Folder 10
+                </a>
+            </div>
+            <h4 class="ui-container-topic">ไฟล์</h4>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item" href="#">
+                    File 1
+                </a>
+                <a class="list-group-item" href="#">
+                    File 2
+                </a>
+                <a class="list-group-item" href="#">
+                    File 3
+                </a>
+                <a class="list-group-item" href="#">
+                    File 4
+                </a>
+                <a class="list-group-item" href="#">
+                    File 5
+                </a>
+                <a class="list-group-item" href="#">
+                    File 6
+                </a>
+                <a class="list-group-item" href="#">
+                    File 7
+                </a>
+                <a class="list-group-item" href="#">
+                    File 8
+                </a>
+                <a class="list-group-item" href="#">
+                    File 9
+                </a>
+                <a class="list-group-item" href="#">
+                    File 10
+                </a>
+            </div>
+        </div>
+        <div class="col-sm-4 ui-dcm-right">
+            <div class="ui-dcm-info">
+                Info
+            </div>
+        </div>
+    </div>
 
 </span>
