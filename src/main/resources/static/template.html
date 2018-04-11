@@ -43,6 +43,7 @@ Copyright 2018 Pamarin.com
                 font-weight: bold;
                 margin-left: 1rem;
                 float: left;
+                cursor: pointer;
             }
 
             .ui-username{
@@ -425,6 +426,7 @@ Copyright 2018 Pamarin.com
               $(function () {
                 var $win = $(window);
                 var $doc = $(document);
+                var $appname = $('.ui-appname');
                 var $sidebar = $('.ui-sidebar');
                 var $sidebarToggle = $('.ui-sidebar-toggle');
                 var $headerMenuToggle = $('.ui-header-menu-toggle, .ui-username');
@@ -493,6 +495,10 @@ Copyright 2018 Pamarin.com
 
                 $doc.on('click', '.ui-back-button', function () {
                   window.history.back();
+                });
+
+                $appname.on('click', function () {
+                  window.location.href = '/';
                 });
               });
             })(jQuery);
