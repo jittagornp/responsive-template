@@ -145,6 +145,10 @@ Copyright 2018 Pamarin.com
                 margin-right: 0.5rem;
             }
 
+            .ui-sidebar-dir{
+                display: none;
+            }
+
             .ui-container{
                 margin-top: 56px;
                 padding-bottom: 100px;
@@ -390,7 +394,10 @@ Copyright 2018 Pamarin.com
             <div class="ui--clear"></div>
         </div>
 
-        <div class="ui-sidebar" th:include="sidebar"></div>
+        <div class="ui-sidebar">
+            <div th:include="sidebar"></div>
+            <div class="ui-sidebar-dir" th:include="sidebar-directory"></div>
+        </div>
 
         <div class="ui-container">
             <div class="container">
@@ -537,6 +544,44 @@ Copyright 2018 Pamarin.com
                     $loadingModal.modal('hide');
                     $win.scrollTop(0);
                   }, 1000);
+                });
+              });
+            })(jQuery);
+        </script>
+        <script>
+            (function ($) {
+              $(function () {
+
+                var $sidebar = $('.ui-sidebar');
+                var $dir = $('.ui-sidebar-dir');
+                var $dirHeader = $('.ui-sidebar-dir-header');
+                var $toggleButton = $('.ui-sidebar-dir-toggle');
+
+                function toggleClass($el, clazz, addCallback, removeCallback) {
+                  if ($el.hasClass(clazz)) {
+                    $el.removeClass(clazz);
+                    removeCallback && removeCallback();
+                  } else {
+                    $el.addClass(clazz);
+                    addCallback && addCallback();
+                  }
+                }
+
+                $dirHeader.on('click', function () {
+                  toggleClass($dir, 'ui-collapse', function () {
+                    $toggleButton.find('.text-center').text('แสดง');
+                    $toggleButton.find('.fa')
+                            .removeClass('fa-angle-down')
+                            .addClass('fa-angle-up');
+                    $sidebar.css('overflow', 'auto');
+                  }, function () {
+                    $toggleButton.find('.text-center').text('ซ่อน');
+                    $toggleButton.find('.fa')
+                            .addClass('fa-angle-down')
+                            .removeClass('fa-angle-up');
+                    $sidebar.css('overflow', 'hidden');
+                    $sidebar.scrollTop(0);
+                  });
                 });
               });
             })(jQuery);
