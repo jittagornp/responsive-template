@@ -1,11 +1,31 @@
 <span th:fragment="container">
+
+    <style>
+        .ui-search-button{
+            border : solid 1px #c7c7c7;
+        }
+        
+        @media (max-width: 576px) { 
+            .ui-search-button .fa{
+                margin-right: 0px;
+            }
+            
+            .ui-search-button .text-center{
+                display: none;
+            }
+        }
+    </style>
+
     <nav aria-label="breadcrumb" class="ui-breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
-                <a href="?page=master-data-management">จัดการข้อมูลพื้นฐาน</a>
+                <a href="?page=document-management">จัดการเอกสาร</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="?page=document-search">ค้นหาเอกสาร</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
-                ชื่อประเทศ
+                ผลลัพธ์การค้นหา
             </li>
         </ol>
         <button class="btn btn-light ui-back-button">
@@ -15,33 +35,27 @@
     </nav>
 
     <div class="ui-container-header">
-        ชื่อประเทศ
+        <span class="fa fa-folder-open"></span>
+        ผลลัพธ์การค้นหา
 
-        <a class="btn btn-success ui-add-button" href="?page=add-country">
-            <span class="fa fa-plus"></span>
-            <span class="text-center">เพิ่มชื่อประเทศ</span>
+        <a class="btn btn-light ui-search-button" 
+           href="?page=document-search"
+           style="float: right;">
+            <span class="fa fa-search"></span>
+            <span class="text-center">ค้นหาใหม่</span>
         </a>
     </div>
-    
-    <div class="input-group" style="margin-bottom: 1rem;">
-        <input type="text" class="form-control" placeholder="ค้นหาด้วย ชื่อ"/>
-        <span class="input-group-btn">
-            <button type="button" class="btn btn-primary">ค้นหา</button>
-        </span>
-    </div>
-
 
     <div style="margin-bottom: 1rem;">
-        พบทั้งหมด 6 รายการ
+        พบทั้งหมด 4 รายการ
     </div>
 
     <div class="table-responsive-sm">
         <table class="table table-sm">
             <thead>
                 <tr>
-                    <th scope="col" style="width : 60px;">ลำดับ</th>
-                    <th scope="col">ชื่อประเทศ</th>
-                    <th scope="col">ทวีป</th>
+                    <th scope="col" style="width: 60px;">ลำดับ</th>
+                    <th scope="col">เอกสาร</th>
                     <th scope="col" class="text-center" style="width: 30px;">
 
                     </th>
@@ -50,8 +64,7 @@
             <tbody>
                 <tr>
                     <th scope="row">1</th>
-                    <td>ลาว</td>
-                    <td>เอเซีย</td>
+                    <td>เอกสาร 1</td>
                     <td>
                         <div class="dropleft dropdown">
                             <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -59,15 +72,14 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="javascript:void(0)">ลบ</a>
-                                <a class="dropdown-item" href="?page=edit-country">แก้ไขข้อมูล</a>
+                                <a class="dropdown-item" href="javascript:void(0)">แก้ไขข้อมูล</a>
                             </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
-                    <td>ไทย</td>
-                    <td>เอเซีย</td>
+                    <td>เอกสาร 2</td>
                     <td>
                         <div class="dropleft dropdown">
                             <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -75,15 +87,14 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="javascript:void(0)">ลบ</a>
-                                <a class="dropdown-item" href="?page=edit-country">แก้ไขข้อมูล</a>
+                                <a class="dropdown-item" href="javascript:void(0)">แก้ไขข้อมูล</a>
                             </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">3</th>
-                    <td>มาเลเซีย</td>
-                    <td>เอเซีย</td>
+                    <td>เอกสาร 3</td>
                     <td>
                         <div class="dropleft dropdown">
                             <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -91,15 +102,14 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="javascript:void(0)">ลบ</a>
-                                <a class="dropdown-item" href="?page=edit-country">แก้ไขข้อมูล</a>
+                                <a class="dropdown-item" href="javascript:void(0)">แก้ไขข้อมูล</a>
                             </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">4</th>
-                    <td>อเมริกา</td>
-                    <td>อเมริกา</td>
+                    <td>เอกสาร 4</td>
                     <td>
                         <div class="dropleft dropdown">
                             <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -107,39 +117,7 @@
                             </button>
                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                 <a class="dropdown-item" href="javascript:void(0)">ลบ</a>
-                                <a class="dropdown-item" href="?page=edit-country">แก้ไขข้อมูล</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>เดนมาร์ก</td>
-                    <td>ยุโรป</td>
-                    <td>
-                        <div class="dropleft dropdown">
-                            <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-ellipsis-v"></span>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="javascript:void(0)">ลบ</a>
-                                <a class="dropdown-item" href="?page=edit-country">แก้ไขข้อมูล</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td>อังกฤษ</td>
-                    <td>ยุโรป</td>
-                    <td>
-                        <div class="dropleft dropdown">
-                            <button class="btn btn-light" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="fa fa-ellipsis-v"></span>
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="javascript:void(0)">ลบ</a>
-                                <a class="dropdown-item" href="?page=edit-country">แก้ไขข้อมูล</a>
+                                <a class="dropdown-item" href="javascript:void(0)">แก้ไขข้อมูล</a>
                             </div>
                         </div>
                     </td>
@@ -161,4 +139,5 @@
             </li>
         </ul>
     </nav>
+
 </span>
