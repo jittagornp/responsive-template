@@ -1,16 +1,31 @@
 <span th:fragment="container">
 
     <style>
+        .ui-dcm .list-group-item{
+            font-size: 90%;
+            color : #8c8c8c;
+        }
+
+        .ui-dcm .list-group-item .row > [class^=col]:first-child{
+            color : #212529;
+            font-weight: 600;
+        }
+
         .ui-dcm-left > .breadcrumb{
             background-color: #f7f7f7;
         }
-        
+
         .ui-dcm-info{
             border: solid 1px #e0e0e0;
-            min-height: 300px;
             padding: 1rem;
             background-color: #fafafa;
             border-radius: 3px;
+            font-size: 90%;
+            line-height: 30px;
+        }
+
+        .ui-dcm-info > .row > [class^=col]:first-child + [class^=col]{
+            color : #949494;
         }
 
         .ui-sidebar-overlay{
@@ -35,12 +50,12 @@
                 margin-top: 2rem; 
             }
         }
-        
+
         @media (max-width: 576px) { 
-                .ui-dcm-left > .breadcrumb{
-                    font-size: 80%;
-                }
+            .ui-dcm-left > .breadcrumb{
+                font-size: 80%;
             }
+        }
     </style>
 
     <nav aria-label="breadcrumb" class="ui-breadcrumb">
@@ -60,7 +75,7 @@
         จัดการเอกสาร
     </div>
 
-    <div class="row">
+    <div class="row ui-dcm">
         <div class="col-sm-8 ui-dcm-left">
 
             <ol class="breadcrumb">
@@ -77,74 +92,338 @@
 
             <h4 class="ui-container-topic">โฟล์เดอร์</h4>
             <div class="list-group list-group-flush">
-                <a class="list-group-item" href="#">
-                    Folder 1
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Folder 1
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    Folder 2
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Folder 2
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    Folder 3
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Folder 3
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    Folder 4
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Folder 4
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    Folder 5
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Folder 5
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    Folder 6
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Folder 6
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    Folder 7
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Folder 7
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    Folder 8
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Folder 8
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    Folder 9
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Folder 9
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    Folder 10
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            Folder 10
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
             </div>
             <h4 class="ui-container-topic">ไฟล์</h4>
             <div class="list-group list-group-flush">
-                <a class="list-group-item" href="#">
-                    File 1
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            File 1
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    File 2
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            File 2
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    File 3
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            File 3
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    File 4
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            File 4
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    File 5
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            File 5
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    File 6
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            File 6
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    File 7
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            File 7
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    File 8
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            File 8
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    File 9
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            File 9
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
-                <a class="list-group-item" href="#">
-                    File 10
+                <a class="list-group-item" href="javascript:void(0)">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            File 10
+                        </div>
+                        <div class="col-sm-3">
+                            ฉัน
+                        </div>
+                        <div class="col-sm-3">
+                            20 เม.ย. 2561
+                        </div>
+                    </div>
                 </a>
             </div>
+
+            <nav aria-label="Page navigation example" style="margin-top: 1rem;">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
         <div class="col-sm-4 ui-dcm-right">
             <div class="ui-dcm-info">
-                Info
+                <div class="font-weight-bold" style="margin-bottom: 0.5rem;">
+                    รายละเอียด
+                </div>
+                <div class="row">
+                    <div class="col-sm-5">
+                        ชื่อโฟล์เดอร์
+                    </div>
+                    <div class="col-sm-7">
+                        folder 3
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5">
+                        สร้างเมื่อ
+                    </div>
+                    <div class="col-sm-7">
+                        1 ม.ค. 2561
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5">
+                        สร้างโดย
+                    </div>
+                    <div class="col-sm-7">
+                        นาย ทดสอบ ระบบ
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5">
+                        จำนวนโฟล์เดอร์
+                    </div>
+                    <div class="col-sm-7">
+                        10
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5">
+                        จำนวนไฟล์
+                    </div>
+                    <div class="col-sm-7">
+                        10
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5">
+                        ความจุ
+                    </div>
+                    <div class="col-sm-7">
+                        100 MB
+                    </div>
+                </div>
             </div>
         </div>
     </div>
