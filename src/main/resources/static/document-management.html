@@ -28,6 +28,15 @@
             color : #949494;
         }
 
+        .ui-dcm-info .btn{
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .ui-dcm-info .btn .fa{
+            margin-right: 0.5rem;
+        }
+
         .ui-sidebar-overlay{
             display: block;
             box-shadow: 3px 0 15px rgba(0, 0, 0, 0.28);
@@ -73,6 +82,11 @@
     <div class="ui-container-header">
         <span class="fa fa-folder-open"></span>
         จัดการเอกสาร
+
+        <a class="btn btn-primary ui-setting-button" href="javascript:void(0)">
+            <span class="fa fa-cog"></span>
+            <span class="text-center">ตั้งค่า</span>
+        </a>
     </div>
 
     <div class="row ui-dcm">
@@ -386,18 +400,18 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-5">
-                        สร้างเมื่อ
-                    </div>
-                    <div class="col-sm-7">
-                        1 ม.ค. 2561
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-5">
                         สร้างโดย
                     </div>
                     <div class="col-sm-7">
                         นาย ทดสอบ ระบบ
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-5">
+                        สร้างเมื่อ
+                    </div>
+                    <div class="col-sm-7">
+                        1 ม.ค. 2561
                     </div>
                 </div>
                 <div class="row">
@@ -423,6 +437,13 @@
                     <div class="col-sm-7">
                         100 MB
                     </div>
+                </div>
+
+                <div>
+                    <button class="btn btn-success">
+                        <span class="fa fa-plus"></span>
+                        เพิ่ม
+                    </button>
                 </div>
             </div>
         </div>
