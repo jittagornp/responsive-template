@@ -6,13 +6,17 @@
         }
 
         @media (max-width : 830px){
-            .ui-form .row > .col-sm{
+            .ui-form .row > [class^=col-sm]{
                 -ms-flex-preferred-size: 0;
                 flex-basis: unset;
                 -webkit-box-flex: 1;
                 -ms-flex-positive: 1;
                 flex-grow: 1;
                 max-width: 100%;
+            }
+
+            .ui-form .row > [class^=col-sm] + [class^=col-sm] label{
+                display: none;
             }
         }
     </style>
@@ -265,7 +269,7 @@
                 </div>
             </div>
             <div class="col-sm">
-                
+
             </div>
         </div>
 
