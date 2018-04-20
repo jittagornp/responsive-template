@@ -94,6 +94,12 @@ Copyright 2018 Pamarin.com
                 background-color: #8323be;
                 border-color: #8323be;
             }
+            
+            .btn-primary,
+            .btn-primary .text-center,
+            .btn-primary .fa{
+                color: #fff;
+            }
 
             .btn-success{
                 background-color: #72ad00;
@@ -124,15 +130,52 @@ Copyright 2018 Pamarin.com
                 border-color: #c6e1f3;
                 background-color: #f6fbff;
             }
-            
+
             a[href="javascript:void(0)"],
             a[href="#"]{
                 cursor: not-allowed;
                 color: #b3b3b3;
             }
+
+
+            .input-group .form-control + .input-group-btn .btn{
+                border-radius: 0 .25rem .25rem 0;
+                margin-left: -1px;
+            }
+
+            .dropdown-item .fa{
+                margin-right: 0.5rem;
+            }
+
+            .form-group .form-control{
+                background-color: #fafbfc;
+            }
+
+            .form-group .form-control:focus{
+                background-color: #fff;
+            }
+
+            .table thead th{
+                border-bottom: 1px solid #dee2e6;
+                font-weight: normal;
+                color: #9c9c9c;
+            }
         </style>
 
         <style>
+            .ui-search-input .form-control,
+            .ui-search-input .btn{
+                border-color: #85b1ce !important;
+            }
+            
+            .ui-search-input .form-control{
+                background-color: #f6fbff;
+            }
+            
+            .ui-search-input .btn{
+                background-color: #dff1ff;
+            }
+            
             .ui-attribute-setting{
                 margin-top: 0.5rem; 
                 display: block;
@@ -447,33 +490,6 @@ Copyright 2018 Pamarin.com
             .ui-loading-modal span{
                 line-height: 40px;
                 margin-right: 1rem;
-            }
-
-            .input-group .form-control + .input-group-btn .btn{
-                border-radius: 0 .25rem .25rem 0;
-                margin-left: -1px;
-            }
-
-            .dropdown-item .fa{
-                margin-right: 0.5rem;
-            }
-
-            .form-group .form-control{
-                background-color: #fafbfc;
-            }
-
-            .form-group .form-control:focus{
-                background-color: #fff;
-            }
-
-            .table thead th{
-                border-bottom: 1px solid #dee2e6;
-                font-weight: normal;
-                color: #9c9c9c;
-            }
-
-            .input-group .form-control + .input-group-btn .btn-light{
-                border-color: #ced4da;
             }
 
             @media (max-width: 400px) { 
