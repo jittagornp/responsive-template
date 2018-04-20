@@ -348,7 +348,18 @@ Copyright 2018 Pamarin.com
                 color: #999;
             }
 
-            .ui-loading img{
+            .ui-loading-logo{
+                width: 100px;
+                height: 100px;
+                background-color: #e5ecd6;
+                border-radius: 50%;
+                position: relative;
+                left: 50%;
+                margin-left: -50px;
+                margin-bottom: 2rem;
+            }
+
+            .ui-loading-spiner{
                 width: 50px;
             }
 
@@ -558,8 +569,9 @@ Copyright 2018 Pamarin.com
 
         <div class="ui-loading">
             <div class="ui-loading-block">
-                <div>Loading...</div>
-                <img src="loading.gif"/>
+                <div class="ui-loading-logo"></div>
+                <div class="ui-loading-text">Loading...</div>
+                <img class="ui-loading-spiner" src="loading.gif"/>
             </div>
         </div>
 
