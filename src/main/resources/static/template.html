@@ -217,6 +217,12 @@ Copyright 2018 Pamarin.com
                 border-color: rgba(0, 0, 0, 0.03);
             }
 
+            .ui-sidebar .list-group-item.ui-highlight{
+                background-color: #ddeffb !important;
+                border-color: #bbcad4 !important;
+                color: #476375 !important;
+            }
+
             .ui-header-menu-toggle{
                 float: right;
                 width: 56px;
@@ -256,7 +262,9 @@ Copyright 2018 Pamarin.com
             }
 
             .ui-sidebar .list-group .list-group-item{
+                border-left: none;
                 border-right: none;
+                border-radius: 0;
             }
 
             .ui-sidebar .list-group .list-group-item:hover{
@@ -839,6 +847,8 @@ Copyright 2018 Pamarin.com
             (function ($) {
               $(function () {
                 $('#tree').treed();
+                var page = location.search;
+                $('.list-group-item[href="' + page + '"]').addClass('ui-highlight');
               });
             })(jQuery);
         </script>
