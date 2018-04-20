@@ -96,8 +96,8 @@ Copyright 2018 Pamarin.com
             }
 
             .btn-success{
-                background-color: #4b9810;
-                border-color: #4b9810;
+                background-color: #72ad00;
+                border-color: #72ad00;
             }
 
             .alert-success{
@@ -117,6 +117,12 @@ Copyright 2018 Pamarin.com
 
             .breadcrumb{
                 background-color: #e9f5d8;
+            }
+            
+            .page-link,
+            .page-item.disabled .page-link{
+                border-color: #c6e1f3;
+                background-color: #f6fbff;
             }
         </style>
 
@@ -280,6 +286,26 @@ Copyright 2018 Pamarin.com
                 max-width: 1000px;
             }
 
+            .ui-container .container:before{
+
+                content: " ";
+                height: 80px;
+                display: block;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 56px;
+
+                background: rgba(255,255,237,1);
+                background: -moz-linear-gradient(top, rgba(255,255,237,1) 0%, rgba(255,255,255,0) 100%);
+                background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,255,237,1)), color-stop(100%, rgba(255,255,255,0)));
+                background: -webkit-linear-gradient(top, rgba(255,255,237,1) 0%, rgba(255,255,255,0) 100%);
+                background: -o-linear-gradient(top, rgba(255,255,237,1) 0%, rgba(255,255,255,0) 100%);
+                background: -ms-linear-gradient(top, rgba(255,255,237,1) 0%, rgba(255,255,255,0) 100%);
+                background: linear-gradient(to bottom, rgba(255,255,237,1) 0%, rgba(255,255,255,0) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffed', endColorstr='#ffffff', GradientType=0 );
+            }
+
             .ui-breadcrumb{
                 position: relative;
                 border-bottom: dashed 1px #dedede;
@@ -309,7 +335,7 @@ Copyright 2018 Pamarin.com
 
             .ui-container-header{
                 font-size: 2rem;
-                border-bottom: solid 1px #ececec;
+                border-bottom: solid 2px #cee0ec;
                 padding: 0.5rem 0;
                 margin-bottom: 1rem;
             }
