@@ -39,7 +39,7 @@ Copyright 2018 Pamarin.com
                 margin:0;
                 padding:0 1em;
                 line-height:2em;
-                color:#212529;
+                color:#5fa728;
                 font-weight:700;
                 position:relative;
                 white-space: nowrap;
@@ -66,16 +66,44 @@ Copyright 2018 Pamarin.com
             }
             .tree li a {
                 text-decoration: none;
-                color:#212529;
+                color:#5fa728;
             }
             .tree li button, .tree li button:active, .tree li button:focus {
                 text-decoration: none;
-                color:#212529;
+                color:#5fa728;
                 border:none;
                 background:transparent;
                 margin:0px 0px 0px 0px;
                 padding:0px 0px 0px 0px;
                 outline: 0;
+            }
+        </style>
+
+        <style>
+            a{
+                color: #72ad00;
+            }
+            
+            a:hover,
+            a:focus,
+            a:active{
+                color: #496f00;
+            }
+            
+            .btn-primary{
+                background-color: #8323be;
+                border-color: #8323be;
+            }
+
+            .btn-success{
+                background-color: #5fa728;
+                border-color: #5fa728;
+            }
+
+            .alert-success{
+                background-color: #d9fdb1;
+                border-color: #c9e8a6;
+                color: #476f1b;
             }
         </style>
 
@@ -95,8 +123,9 @@ Copyright 2018 Pamarin.com
             }
 
             .ui-header{
-                background-color: #fafafa;
-                border-bottom: 1px solid #ebebeb;
+                color : #fff;
+                background-color: #72ad00;
+                border-bottom: 1px solid #72ad00;
                 height: 56px;
                 z-index: 2;
                 position: fixed;
@@ -121,10 +150,14 @@ Copyright 2018 Pamarin.com
             }
 
             .ui-sidebar-toggle{
-                border-right: solid 1px #e6e6e6;
+                border-right: solid 1px #a7ce5d;
                 float: left;
                 width: 56px;
                 height: 56px;
+            }
+            
+            .ui-sidebar-header .ui-sidebar-toggle{
+                border-color: #d4d4d4;
             }
 
             .ui-sidebar-toggle .fa{
@@ -137,7 +170,7 @@ Copyright 2018 Pamarin.com
             }
 
             .ui-header .ui-sidebar-toggle .fa{
-                color: #989898;
+                color: #fff;
             }
 
             .ui-sidebar{
@@ -170,7 +203,7 @@ Copyright 2018 Pamarin.com
                 margin-top: 15px;
                 margin-left: 22px;
                 font-size: 24px;
-                color: #989898;
+                color: #fff;
             }
 
             .ui-header-menu-dropdown{
@@ -350,23 +383,23 @@ Copyright 2018 Pamarin.com
                 border-radius: 0 .25rem .25rem 0;
                 margin-left: -1px;
             }
-            
+
             .dropdown-item .fa{
                 margin-right: 0.5rem;
             }
-            
+
             .form-group .form-control{
                 background-color: #fafbfc;
             }
-            
+
             .form-group .form-control:focus{
                 background-color: #fff;
             }
-            
+
             .table thead th{
                 border-bottom: 1px solid #dee2e6;
             }
-            
+
             .input-group .form-control + .input-group-btn .btn-light{
                 border-color: #ced4da;
             }
@@ -419,7 +452,7 @@ Copyright 2018 Pamarin.com
                     box-shadow: none;
                     -moz-box-shadow: none;
                     -webkit-box-shadow: none;
-                    background-color: #fff;
+                    background-color: #F5F5F6;
                 }
 
                 .ui-container{
