@@ -94,7 +94,7 @@ Copyright 2018 Pamarin.com
                 background-color: #8323be;
                 border-color: #8323be;
             }
-            
+
             .btn-primary,
             .btn-primary .text-center,
             .btn-primary .fa{
@@ -160,6 +160,10 @@ Copyright 2018 Pamarin.com
                 font-weight: normal;
                 color: #9c9c9c;
             }
+
+            .breadcrumb-item > a{
+                white-space: nowrap;
+            }
         </style>
 
         <style>
@@ -167,15 +171,11 @@ Copyright 2018 Pamarin.com
             .ui-search-input .btn{
                 border-color: #85b1ce !important;
             }
-            
-            .ui-search-input .form-control{
-              
-            }
-            
+
             .ui-search-input .btn{
                 background-color: #dff1ff;
             }
-            
+
             .ui-attribute-setting{
                 margin-top: 0.5rem; 
                 display: block;
@@ -516,6 +516,12 @@ Copyright 2018 Pamarin.com
 
                 .breadcrumb{
                     font-size: 80%;
+                    padding: .5rem;
+                }
+
+                .breadcrumb-item + .breadcrumb-item::before{
+                    padding-right: .2rem;
+                    padding-left: .2rem;
                 }
             }
 
