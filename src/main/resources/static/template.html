@@ -91,8 +91,17 @@ Copyright 2018 Pamarin.com
             }
 
             .btn-primary{
-                background-color: #8323be;
+                /*background-color: #8323be;*/
                 border-color: #8323be;
+
+                background: rgba(131,35,190,1);
+                background: -moz-linear-gradient(left, rgba(131,35,190,1) 0%, rgba(107,36,189,1) 100%);
+                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(131,35,190,1)), color-stop(100%, rgba(107,36,189,1)));
+                background: -webkit-linear-gradient(left, rgba(131,35,190,1) 0%, rgba(107,36,189,1) 100%);
+                background: -o-linear-gradient(left, rgba(131,35,190,1) 0%, rgba(107,36,189,1) 100%);
+                background: -ms-linear-gradient(left, rgba(131,35,190,1) 0%, rgba(107,36,189,1) 100%);
+                background: linear-gradient(to right, rgba(131,35,190,1) 0%, rgba(107,36,189,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8323be', endColorstr='#6b24bd', GradientType=1 );
             }
 
             .btn-primary,
@@ -118,11 +127,11 @@ Copyright 2018 Pamarin.com
 
             a.dropdown-item:active{
                 background-color: #98cc36;
-                color: #fff;
+                color: #fff !important;
             }
 
             .breadcrumb{
-                background-color: #e9f5d8;
+                background-color: #fff4bc;
             }
 
             .page-link,
@@ -141,6 +150,11 @@ Copyright 2018 Pamarin.com
             .input-group .form-control + .input-group-btn .btn{
                 border-radius: 0 .25rem .25rem 0;
                 margin-left: -1px;
+            }
+
+            .input-group .form-control + .input-group-btn .btn-light{
+                border: 1px solid #ced4da;
+                color: #717171;
             }
 
             .dropdown-item .fa{
@@ -164,12 +178,48 @@ Copyright 2018 Pamarin.com
             .breadcrumb-item > a{
                 white-space: nowrap;
             }
+            
+            .btn-light{
+                border : solid 1px #e2e2e2;
+            }
+            
+            td .btn-light{
+                border: none;
+            }
+            
+            a[data-toggle="modal"]{
+                cursor: pointer;
+            }
+            
+            .modal-content{
+                overflow: hidden;
+            }
+            
+            .modal-footer{
+                background-color: whitesmoke;
+            }
         </style>
 
         <style>
+            .ui-container-header-button{
+                float: right;
+            }
+
+            .ui-container-header-button.btn-light{
+                border: solid 1px #c7c7c7;
+            }
+
+            .ui-container-header-button{
+                margin-left: 1rem;
+            }
+
+            .ui-container-header-button .fa-arrow-up{
+                margin-right: 0 !important;
+            }
+
             .ui-search-input .form-control,
             .ui-search-input .btn{
-                border-color: #85b1ce !important;
+                border-color: #a6c9e0 !important;
             }
 
             .ui-search-input .btn{
@@ -206,6 +256,17 @@ Copyright 2018 Pamarin.com
                 top : 0;
                 left: 0;
                 right: 0;
+
+                /*
+                background: rgba(115,173,0,1);
+                background: -moz-linear-gradient(left, rgba(115,173,0,1) 0%, rgba(68,171,0,1) 100%);
+                background: -webkit-gradient(left top, right top, color-stop(0%, rgba(115,173,0,1)), color-stop(100%, rgba(68,171,0,1)));
+                background: -webkit-linear-gradient(left, rgba(115,173,0,1) 0%, rgba(68,171,0,1) 100%);
+                background: -o-linear-gradient(left, rgba(115,173,0,1) 0%, rgba(68,171,0,1) 100%);
+                background: -ms-linear-gradient(left, rgba(115,173,0,1) 0%, rgba(68,171,0,1) 100%);
+                background: linear-gradient(to right, rgba(115,173,0,1) 0%, rgba(68,171,0,1) 100%);
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#73ad00', endColorstr='#44ab00', GradientType=1 );
+          /*/
             }
 
             .ui-appname{
@@ -399,6 +460,10 @@ Copyright 2018 Pamarin.com
 
             .ui-container-header .fa{
                 margin-right: 0.5rem;
+            }
+
+            .ui-container-header > .fa:first-child{
+                color: #7a838c;
             }
 
             .ui-add-button,
@@ -640,6 +705,27 @@ Copyright 2018 Pamarin.com
                         <img src="rolling.gif"/>
                         <span>กำลังดำเนินการ...</span>
                         <div class="ui--clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="deleteModalLabel">ยืนยันการลบข้อมูล</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ต้องการลบข้อมูลหรือไม่
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-dismiss="modal">ยกเลิก</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">ยืนยัน</button>
                     </div>
                 </div>
             </div>
