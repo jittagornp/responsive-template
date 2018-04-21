@@ -210,7 +210,7 @@ Copyright 2018 Pamarin.com
             #deleteModal .modal-content{
                 margin-top: 40%;
             }
-            
+
             .ui-container-header-button{
                 float: right;
             }
@@ -977,8 +977,18 @@ Copyright 2018 Pamarin.com
             (function ($) {
               $(function () {
                 $('#tree').treed();
-                var page = location.search;
-                $('.list-group-item[href="' + page + '"]').addClass('ui-highlight');
+
+                var breadcrumbPage = $('.ui-container .breadcrumb-item a').attr('href');
+                if (breadcrumbPage) {
+                  $('.list-group-item[href="' + breadcrumbPage + '"]').addClass('ui-highlight');
+                } else {
+                  var page = location.search;
+                  if (!page) {
+                    page = '?page=index';
+                  }
+
+                  $('.list-group-item[href="' + page + '"]').addClass('ui-highlight');
+                }
               });
             })(jQuery);
         </script>
