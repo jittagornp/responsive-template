@@ -184,12 +184,6 @@ Copyright 2018 Pamarin.com
                 background-color: #fff;
             }
 
-            .table thead th{
-                border-bottom: 1px solid #dee2e6;
-                font-weight: normal;
-                color: #9c9c9c;
-            }
-
             .breadcrumb-item > a{
                 white-space: nowrap;
             }
@@ -214,8 +208,13 @@ Copyright 2018 Pamarin.com
                 background-color: whitesmoke;
             }
 
-            .table thead tr{
-                background-color: #f5fbff;
+            .table thead th{
+                background-color: #f6fbff;
+                border-color: #c6e1f3;
+
+                border-bottom-width: 1px;
+                font-weight: normal;
+                color: #9fc3cc;
             }
         </style>
 
@@ -620,6 +619,10 @@ Copyright 2018 Pamarin.com
                 .breadcrumb-item + .breadcrumb-item::before{
                     padding-right: .2rem;
                     padding-left: .2rem;
+                }
+                
+                .table thead th{
+                    font-size: 90%;
                 }
             }
 
