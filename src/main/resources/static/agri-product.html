@@ -1,0 +1,162 @@
+<span th:fragment="container">
+    <nav aria-label="breadcrumb" class="ui-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="?page=agriculture">ข้อมูลสินค้าเกษตร</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+                แบบฟอร์มนำเข้าข้อมูลสินค้าเกษตร
+            </li>
+        </ol>
+        <button class="btn btn-light ui-back-button">
+            <span class="fa fa-chevron-left"></span>
+            กลับ
+        </button>
+    </nav>
+
+    <div class="ui-container-header">
+        <span class="fa fa-pagelines"></span>
+        แบบฟอร์มนำเข้าข้อมูลสินค้าเกษตร
+    </div>
+
+    <div class="input-group ui-search-input" style="margin-bottom: 1rem;">
+        <input type="text" class="form-control" placeholder="ค้นหาด้วย ชื่อรายงาน"/>
+        <span class="input-group-btn">
+            <button type="button" class="btn btn-light">ค้นหา</button>
+        </span>
+    </div>
+
+    <div style="margin-bottom: 1rem;">
+        พบทั้งหมด 70 รายการ
+    </div>
+
+    <div class="table-responsive-sm">
+        <table class="table table-sm">
+            <thead>
+                <tr>
+                    <th scope="col" style="width : 60px;">ลำดับ</th>
+                    <th scope="col">ชื่อสินค้า</th>
+                    <th scope="col" class="text-center" style="width: 60px;">
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>ข้าว</td>
+                    <td>
+                        <a class="btn btn-light" href="">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">1</th>
+                    <td>กระเจี๊ยบแห้ง</td>
+                    <td>
+                        <a class="btn btn-light" href="">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">3</th>
+                    <td>กระเทียม</td>
+                    <td>
+                        <a class="btn btn-light" href="">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">4</th>
+                    <td>กระบือ</td>
+                    <td>
+                        <a class="btn btn-light" href="">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">5</th>
+                    <td>กากถั่วเหลือง</td>
+                    <td>
+                        <a class="btn btn-light" href="">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">6</th>
+                    <td>เมล็ดกาแฟ</td>
+                    <td>
+                        <a class="btn btn-light" href="">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">7</th>
+                    <td>กุ้งก้ามกราม</td>
+                    <td>
+                        <a class="btn btn-light" href="">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">8</th>
+                    <td>เกลือทะเล</td>
+                    <td>
+                        <a class="btn btn-light" href="">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">9</th>
+                    <td>ไก่เนื้อ</td>
+                    <td>
+                        <a class="btn btn-light" href="">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+
+                <tr>
+                    <th scope="row">10</th>
+                    <td>ข้าวโพดเลี้ยงสัตว์</td>
+                    <td>
+                        <a class="btn btn-light" href="">
+                            บันทึก
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="javascript:void(0)" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0)">1</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+            <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="javascript:void(0)">Next</a>
+            </li>
+        </ul>
+    </nav>
+
+</span>
